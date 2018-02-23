@@ -1,0 +1,165 @@
+﻿<html>
+<meta charset="UTF-8">
+<meta name="viewport" contain="width=device-width, intial scale=1">
+<body bgcolor="black"> 
+<link rel="stylesheet" href="script/style.css">  
+<style>
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #f4acc0;
+    color: black;
+}
+.button3 {
+    background-color: #f44336;
+}
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: white;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: blue;
+}
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<title>work8</title> 
+
+<link rel="icon" size="any" mask href="pics/hitoha.ico">
+
+<font color="white">
+
+<nav class="w3-bar w3-blue-gray">  
+<a href="index.html" class="w3-button w3-bar-item">Home</a>
+</nav>
+
+<p class="w3-justify w3-opacity">1.JS Form</p>
+<form action="welcome.php" method="post">
+Name: <input type="text" name="name">
+<p class="w3-justify">E-mail: <input type="text" name="email"></p>
+<input type="submit" value="submit">
+</form></p>
+
+<p class="w3-justify w3-opacity">2.JS object</p>  
+<p id="demo"></p>
+
+<script>
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.age + ". My mother is " + myMother.age; 
+</script> 
+<div>
+<div class="div2">
+ <p class="w3-opacity">3.JS HTML DOM</p>
+ &nbsp;<3.1>change text
+ <p id="id">Hello</p>
+ <button class="button3" type="button" onclick="document.getElementById('id').innerHTML='Hello,How are you?'">click</button>
+
+<p> &nbsp;<3.2>change text color
+ <p id="id2">change to red</p>
+<button class="button3" onclick="document.getElementById('id2').style.color='red'">Click</button>
+ <p>
+ &nbsp;<3.3>animation<br>
+  <button class="button3" onclick="myMove()">Click Me</button>
+</p> 
+
+
+
+<div id ="container">
+<div id ="animate"></div>
+</div>
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>
+</div>
+<div class="div2">
+ <p class="w3-opacity">4.JS Function</p>
+ <p><4.1>Max number</p>
+1,2,3,4,5,6,7,8,9,10
+<p id="demoo"></p>
+
+<script>
+document.getElementById("demoo").innerHTML = Math.max(1,2,3,4,5,6,7,8,9,10); 
+</script>
+  <p><4.2>Number +1</p>
+<button class="button3" onclick="myFunction()">Click</button>
+
+<p id="dem">100</p>
+
+<script>
+var counter = 100;
+
+function add() {
+    return counter += 1;
+}
+
+function myFunction(){
+    document.getElementById("dem").innerHTML = add();
+}
+</script>
+</div>
+<div class="div2">
+ <p class="w3-opacity">5.JS Browser BOM</p>
+ <p>Show screen size.</p>
+ <p id="de"></p>
+
+<script>
+document.getElementById("de").innerHTML = 
+"Screen width is " + screen.width;
+</script>
+</div>
+<div class="div2">
+ <h2>6.JS AJAX</h2>
+
+</div>
+<div class="div2">
+ <h2>7.JS JSON</h2>
+ <script>
+
+var myObj = { "name":"John", "age":31, "city":"New York" };
+var myJSON = JSON.stringify(myObj);
+window.location = "demo_json.php?x=" + myJSON;
+
+</div></body>
+ </html>

@@ -1,0 +1,180 @@
+﻿<html>
+<meta charset="UTF-8">
+<meta name="viewport" contain="width=device-width, intial scale=1">
+
+<link rel="stylesheet" href="script/style.css">  
+<title>work9</title> 
+
+<link rel="icon" size="any" mask href="pics/hitoha.ico">
+<body onLoad="w3jQuerySelectorLoad();" bgcolor="black"> 
+<font color="white">
+
+<nav class="w3-bar w3-blue-gray">  
+<a href="index.html" class="w3-button w3-bar-item">Home</a>
+</nav>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        var div = $("h5");  
+        div.animate({left: '100px'}, "slow");
+        div.animate({fontSize: '18px'}, "slow");
+    });
+});
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#00ccff");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#button").click(function(){
+        $("div").hide(2500);
+    });
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("div").hide();
+    });
+    $("#show").click(function(){
+        $("div").show();
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("h4").on({
+        mouseenter: function(){
+            $(this).css("background-color", "lightgray");
+        },  
+        mouseleave: function(){
+            $(this).css("background-color", "lightblue");
+        }, 
+        click: function(){
+            $(this).css("background-color", "yellow");
+        }  
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("p").on("click", function(){
+        $(this).hide();
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("h1").dblclick(function(){
+        $(this).hide();
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#tog").click(function(){
+        $("p").toggle();
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $(".hh").click(function(){
+        $(":button").hide();
+    });
+});
+</script>
+<p class="w3-opacity">Technic 1</p>
+<div class="noSel newsletter" style="background-color:#99D6FF;border:1px solid #0099FF;padding:10px;xfont-size:12px;">
+<form>
+ <h4> Subscribe to my newsletter:</h4>
+ <div style="overflow:auto;">
+  <div style="width:100px;float:left;">Name:</div><div style="width:180px;float:left;"><input type="text" style="width:150px" class="markup" /></div>
+    </div>
+ <div style="overflow:auto;">
+  <div style="width:100px;float:left;">E-mail:</div><div style="width:180px;float:left;"><input type="text" style="width:150px" class="markup" /></div>
+    </div>
+ <div style="overflow:auto;">
+  <div style="width:100px;float:left;">Password:</div><div style="width:180px;float:left;"><input type="password" style="width:150px" name="password"/></div>
+    </div>
+    Female: <input name="rr" type="radio" id="rr1" checked="checked" style="outline:2px solid transparent"/>
+ Male: <input name="rr" type="radio" id="rr2" style="outline:2px solid transparent" />
+ Other: <input name="rr" type="radio" id="rr3" disabled="disabled" style="outline:2px solid transparent" />  
+ <div style="overflow:auto;">
+  <h4>Newscategories:</h4>
+  <div style="width:70px;float:left;">Ducks:</div><div style="width:20px;float:left;"><input id="cc1" type="checkbox" checked="checked" style="outline:2px solid transparent" /></div>
+    </div>
+ <div style="overflow:auto;">
+  <div style="width:70px;float:left;">Dogs:</div><div style="width:20px;float:left;"><input id="cc2" type="checkbox" style="outline:2px solid transparent" /></div>
+    </div>
+ <div style="overflow:auto;">
+  <div style="width:70px;float:left;">Humans:</div><div style="width:20px;float:left;"><input id="cc3" type="checkbox" style="outline:2px solid transparent" /></div>
+ </div>
+ <div class="noSel" style="clear:both;"></div>   
+ <input class="noSel" type="reset" value="Reset" style="outline:2px solid transparent" />
+ <input class="noSel" type="submit" value="Submit" style="outline:2px solid transparent" /> 
+ <input class="noSel" type="button" value="Cancel" style="outline:2px solid transparent" />
+ <h4>My Favourite:</h4>
+ <select multiple class="myselect">
+  <option>Movies</option>
+  <option selected>Game Center</option>
+  <option>Listen Music</option>  
+  <option>Swim</option>
+  <option>Run</option>
+  <option>Fitness</option>
+ </select>
+ <h4>Upload image:</h4>
+ <input type="file">
+</form>
+</div>
+
+<p class="w3-opacity"><span class="markup"></span>click to active technic 3 <span class="markup"></span></p>
+<h1><span class="markup"></span>double click to active technic 4<span class="markup"></span></h1> 
+<p class="w3-opacity">Technic 5</p>
+   <button id="hide">hide</button>
+   <button id="show">show</button> 
+<p class="w3-opacity">Technic 6</p><button id="button">hide</button>
+<p class="w3-opacity">Technic7</p><button id="tog">Toggle</button>
+
+    <div id="flip">click to show technic 8</div>
+<div id="panel">This page made for learning only.</a></div>
+ <p class="w3-opacity">Technic 9</p><button>Start Animation</button><br>
+<p class="w3-opacity">Technic 10</p><button class="hh">Hide</button>
+<p><nav class="w3-bar w3-blue">  
+<h2>คำอธิบายเพิ่มเติมของแต่ละเทคนิค</h2>
+</nav></p>
+
+<h5 style="background-color:#ff3;width:700px;height:150px;padding:10px;position:absolute;color:#000;">
+    1.ประเภทของคำสั่ง text จะใช้เทคนิค MouseDown <font color="#ff0000">(เทคนิคบังคับ)</font><br>
+    2.ประเภทของคำสั่ง h4 จะใช้เทคนิค Attach multiple event handlers เลื่อนผ่านแล้วเกิด highlight(ตัวจัดการหลายเหตุการณ์) <font color="#ff0000">(เทคนิคบังคับ)</font><br>
+    3.ประเภทของคำสั่ง p จะใช้เทคนิค ซ่อนเนื้อหาของแท็ก p &nbsp;&nbsp;(Hide)<br>
+    4.ประเภทของคำสั่ง h1 ดับเบิ้ลคลิกแล้วซ่อนเนื้อหา<br>
+    5.ประเภทของคำสั่ง div จะใช้ button ในการซ่อน และแสดงเนื้อหาของแท็ก div<br>
+    6.ซ่อนเนื้อหาที่ใช้แท็ก div ช้าๆ<br>
+    7.เทคนิค Toggle ใช้ร่วมกับแท็ก p เพื่อซ่อนและแสดงเนื้อหา<br>
+    8.เทคนิคที่ 8 jQuerySlideDown<br>
+    9.เทคนิค Animation
+    10.ซ่อนปุ่มทั้งหมด
+</h5>
+</body>
+ </html>
